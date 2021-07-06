@@ -1,0 +1,11 @@
+{{if not .IsPage}}
+  <div style="width: 200px" class="mt50 sidebar">
+    {{- $root := .}}
+    <div>分类</div>
+    {{- $p := printf "widgets/categories.html"}}
+    {{- partial $p $root}}
+    <div>标签</div>
+    {{- $p := printf "widgets/taglist.html"}}
+    {{- partial $p $root}}
+  </div>
+{{end}}

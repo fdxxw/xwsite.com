@@ -1,0 +1,16 @@
+<div class="navbar">
+	<div class="container">
+		<div class="navbar-logo pointer">
+			<i class="iconfont icon-xihuan" style="color: red"></i><a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
+		</div>
+		<div class="navbar-right menu">
+			<a class="ml20" href="/">首页</a>
+			{{$currentPage := .}}
+			{{range .Site.Menus.main}}
+			<a class="ml20" href="{{.URL}}">{{.Name}}</a>
+			{{end}}
+			<a class="ml20" href="/categories">分类</a>
+			<a class="ml20" href="/tags">标签</a>
+		</div>
+	</div>
+</div>

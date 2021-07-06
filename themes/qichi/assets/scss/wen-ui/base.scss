@@ -1,0 +1,417 @@
+* {
+  padding: 0;
+  margin: 0;
+  outline: none;
+  box-sizing: border-box;
+  word-break: break-all;
+  word-break: break-word;
+}
+
+html {
+  font-size: 100px;
+  font-family: $font-family;
+  line-height: $line-height;
+  background-color: $html-background;
+}
+
+body {
+  font-size: $font-size;
+  color: $color;
+  min-height: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: $color-url;
+
+  &.hover {
+    color: $color-url-hover;
+  }
+  &.error {
+    color: $color-error;
+  }
+
+  &.disabled {
+    color: $color-button-disabled !important;
+    &:hover {
+      background: initial !important;
+    }
+  }
+}
+a:hover,
+.hover:hover {
+  cursor: pointer;
+  color: $color-url-hover !important;
+}
+
+blockquote {
+  border-left: 0.05rem solid $color-primary;
+  background-color: #e1e1e1;
+  padding: 0.1rem;
+  margin: 0.1rem;
+}
+
+pre,
+p {
+  word-break: break-all;
+  word-wrap: break-word;
+  word-break: normal;
+}
+
+table {
+  width: 100%;
+}
+
+img {
+  max-width: 100%;
+}
+// 2~5倍字体大小
+.font-2x {
+  font-size: 2em;
+}
+
+.font-3x {
+  font-size: 3em;
+}
+
+.font-4x {
+  font-size: 4em;
+}
+
+.font-5x {
+  font-size: 5em;
+}
+
+/* 移除上下小箭头*/
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none !important;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+input[required]:invalid,
+input:focus:invalid,
+textarea[required]:invalid,
+textarea:focus:invalid {
+  box-shadow: none;
+}
+
+// 定位
+
+.abs {
+  position: absolute !important;
+}
+
+.rel {
+  position: relative !important;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.inline {
+  display: inline-block;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.block {
+  display: block !important;
+}
+
+.full {
+  width: 100% !important;
+}
+.h-full {
+  height: 100% !important;
+}
+
+.fixed {
+  position: fixed;
+}
+
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+// 标题
+
+.title {
+  color: $color-title;
+  font-weight: 600;
+}
+
+// 循环
+@each $item in $padding-list {
+  .m#{$item} {
+    margin: #{$item * 0.01}rem !important;
+  }
+
+  .mv#{$item} {
+    margin-top: #{$item * 0.01}rem !important;
+    margin-bottom: #{$item * 0.01}rem !important;
+  }
+
+  .mh#{$item} {
+    margin-left: #{$item * 0.01}rem !important;
+    margin-right: #{$item * 0.01}rem !important;
+  }
+
+  .ml#{$item} {
+    margin-left: #{$item * 0.01}rem !important;
+  }
+
+  .mt#{$item} {
+    margin-top: #{$item * 0.01}rem !important;
+  }
+
+  .mr#{$item} {
+    margin-right: #{$item * 0.01}rem !important;
+  }
+
+  .mb#{$item} {
+    margin-bottom: #{$item * 0.01}rem !important;
+  }
+
+  .p#{$item} {
+    padding: #{$item * 0.01}rem !important;
+  }
+
+  .pv#{$item} {
+    padding-top: #{$item * 0.01}rem !important;
+    padding-bottom: #{$item * 0.01}rem !important;
+  }
+
+  .ph#{$item} {
+    padding-left: #{$item * 0.01}rem !important;
+    padding-right: #{$item * 0.01}rem !important;
+  }
+
+  .pl#{$item} {
+    padding-left: #{$item * 0.01}rem !important;
+  }
+
+  .pt#{$item} {
+    padding-top: #{$item * 0.01}rem !important;
+  }
+
+  .pr#{$item} {
+    padding-right: #{$item * 0.01}rem !important;
+  }
+
+  .pb#{$item} {
+    padding-bottom: #{$item * 0.01}rem !important;
+  }
+}
+
+// 文本剧中
+.text-left {
+  text-align: left !important;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.text-right {
+  text-align: right !important;
+}
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.middle {
+  vertical-align: middle !important;
+  align-items: center;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.no-radius {
+  border-radius: 0;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+.word-break {
+  word-break: break-all;
+  word-wrap: break-word;
+  word-break: break-word;
+}
+
+.primary {
+  color: $color-primary;
+}
+
+.warning {
+  color: $color-warning;
+}
+
+.success {
+  color: $color-success;
+}
+
+.error {
+  color: $color-error;
+}
+
+.gray {
+  color: $color-gray;
+}
+
+.normal {
+  font-weight: normal !important;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.border {
+  border: 1px solid $color-border;
+  border-radius: 0.04rem;
+}
+
+.border-none {
+  border: none !important;
+}
+
+.border-top {
+  border-top: 1px solid $color-border;
+}
+
+.border-bottom {
+  border-bottom: 1px solid $color-border;
+}
+
+.border-left {
+  border-left: 1px solid $color-border;
+}
+
+.border-right {
+  border-right: 1px solid $color-border;
+}
+
+.text-desc {
+  color: $color-desc;
+}
+
+.line-height {
+  line-height: 1.5;
+}
+
+.pre {
+  white-space: pre;
+}
+
+.text-line {
+  width: 100%;
+  border-bottom: 1px solid transparentize($color-border, 0.9);
+  height: 10px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.overflow-auto {
+  overflow: auto;
+}
+
+.overflow-x-auto {
+  overflow-x: auto;
+}
+
+.overflow-y-auto {
+  overflow-y: auto;
+}
+
+/*定义滚动条轨道 内阴影+圆角*/
+::-webkit-scrollbar {
+  width: 0.08rem;
+  height: 0.08rem;
+  background: transparent;
+}
+
+::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #dedee4;
+  border-radius: 0.04rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #ccc;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent !important;
+}
+
+::-webkit-scrollbar-track:hover {
+  background-color: rgba(50, 50, 50, 0.2);
+}
+
+.icon-spin {
+  display: inline-block;
+  animation: icon-spin $spin-duration infinite linear;
+}
+
+@keyframes icon-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+
+ui-loading {
+  display: block;
+}
+
+.line {
+  /* autoprefixer: ignore next */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  word-break: break-all;
+  word-break: break-word;
+}
+
+.line.one {
+  -webkit-line-clamp: 1;
+  display: block;
+  white-space: nowrap;
+}
+
+.line.two {
+  -webkit-line-clamp: 2;
+}
+
+.line.three {
+  -webkit-line-clamp: 3;
+}

@@ -1,0 +1,30 @@
+<article class="post-summary border-bottom mt20">
+    <header class="post-summary-head">
+        <h3>
+            <a href="{{.RelPermalink}}" rel="bookmark" class="bold">{{.Title}}</a>
+        </h3>
+        <div class="flex middle">
+            <i class="fa fa-clock-o mr5"></i>{{.Date.Format "2006-01-02"}}
+            {{- if .Params.tags}}
+            <div class="ml10">
+                {{range .Params.tags}}
+                <i class="fa fa-tag" style="color:orange"></i><a href="/tags/{{ . | urlize }}" class="primary ml5">{{.}}</a>
+                {{end}}
+            </div>
+            {{- end}}
+        </div>
+
+    </header>
+    {{- if .Params.image}}
+    <div class="post-summary-image">
+        <image src="{{.Params.image}}"></image>
+    </div>
+    {{- end}}
+    <div class="post-summary-content mb20">
+        {{ with .Params.description }}
+        {{ . }}
+        {{ else }}
+        {{ .Summary }}
+        {{ end }}
+    </div>
+</article>

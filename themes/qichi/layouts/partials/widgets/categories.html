@@ -1,0 +1,11 @@
+{{- $categories := .Site.Taxonomies.categories }}
+
+<div>
+  {{- range $name, $taxonomy := $categories }}
+			{{- with $.Site.GetPage (printf "/categories/%s" $name) }}
+			<div class="ml20">
+				<a class="primary" href="{{ .RelPermalink }}">{{ .Title }} ({{$taxonomy.Count}})</a>
+			</div>
+			{{- end }}
+	{{- end }}
+</div>

@@ -1,0 +1,81 @@
+/** Layout **/
+
+.navbar {
+  height: 0.6rem;
+  line-height: 0.6rem;
+  width: 100%;
+  .container {
+    width: auto;
+    max-width: 1100px;
+    text-align: center;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    color: #000;
+    font-weight: 500;
+  }
+}
+
+@media screen and (max-width: 1366px) {
+  .sidebar {
+    display: none;
+  }
+  .article-container {
+    margin: unset;
+  }
+}
+
+@media screen and (min-width: 1367px) {
+  .article-container {
+    max-width: 780px;
+  }
+}
+
+.sidebar {
+  #TableOfContents {
+    position: fixed;
+    width: 200px;
+    margin-left: 20px;
+    border-left: 2px solid #009688;
+    ul {
+      padding-left: 20px;
+      li {
+        list-style: none;
+        line-height: 20px;
+      }
+    }
+  }
+}
+
+
+
+main {
+  // background-image: url(/images/mathematics-wallpaper.jpg);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  .article-container {
+    min-width: 0;
+    width: 100%;
+    margin: 20px;
+  }
+}
+.container {
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.footer {
+  height: 0.4rem;
+  width: 100%;
+  text-align: center;
+  line-height: 0.4rem;
+  padding-top: 2em;
+}
+
+.notfound {
+  font-size: 2em;
+  transform: translateY(35vh);
+  text-align: center;
+}

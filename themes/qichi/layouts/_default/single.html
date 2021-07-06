@@ -1,0 +1,29 @@
+{{ define "main" }}
+<main>
+  <article class="markdown-wrapper">
+    <header>
+      <h1>{{ .Title }}</h1>
+      <div class="flex center full middle">
+          <i class="fa fa-clock-o" style="font-size: 18px;"></i>
+          <span class="ml10">{{ .Date.Format "2006年01月02日" }}</span>
+          <div class="ml10" title="字数">
+            <i class="fa fa-file-word-o" style="font-size: 18px;"></i>
+            {{.WordCount}}
+          </div>
+        {{- if .Params.tags}}
+          <div class="ml10">
+            {{range .Params.tags}}
+            <i class="fa fa-tag" style="color:orange"></i><a href="/tags/{{ . | urlize }}" class="primary ml5">{{.}}</a>
+            {{end}}
+          </div>
+        {{- end}}
+          
+        <!-- <people>.Author</people> -->
+      </div>
+    </header>
+    <div class="border mt5"></div>
+    {{ .Content }}
+  </article>
+  {{ partial "toc.html" . }}
+</main>
+{{end}}

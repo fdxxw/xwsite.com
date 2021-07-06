@@ -1,0 +1,9 @@
+<head>
+  {{/* {{ $style := resources.Get "scss/main.scss" | toCSS | minify | fingerprint }}*/}} 
+  {{ $style := resources.Get "scss/main.scss" | toCSS }} 
+  {{  $iconfont := resources.Get "font/iconfont.css" }}
+  <link rel="stylesheet" href="{{ $iconfont.Permalink }}" />
+  <link rel="stylesheet" href="{{ $style.Permalink }}" />
+  <link rel="stylesheet" href="https://unpkg.com/heti/umd/heti.min.css" />
+  <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+</head>

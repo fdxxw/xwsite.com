@@ -1,0 +1,14 @@
+{{- $tags := .Site.Taxonomies.tags }}
+<div class="flex wrap">
+  {{- range $name, $taxonomy := $tags }}
+    {{- with $.Site.GetPage (printf "/tags/%s" $name)}}
+    <div class="ml5">
+      <i class="fa fa-tag" style="color:orange"></i>
+      <a href="{{.RelPermalink }}" class="primary ml5">
+        {{- .Title }}
+        ({{$taxonomy.Count}})
+      </a>
+    </div>
+    {{- end}}
+  {{- end }}
+</div>

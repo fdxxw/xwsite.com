@@ -1,0 +1,19 @@
+
+
+{{ $paginator := .Paginator }}
+
+{{- if gt $paginator.TotalPages 1 }}
+
+<div class="pagination flex mt10 center">
+   {{- if $paginator.HasPrev }}
+   <a class="button" href="{{$paginator.Prev.URL}}">上一页</a>
+   {{- end}}
+   <a href=""></a>
+   {{ range $paginator.Pagers }}
+   <a class="ml10 button {{if eq . $paginator}} primary border {{end}}" href="{{.URL}}">{{.PageNumber}}</a>
+   {{- end }}
+   {{- if $paginator.HasNext }}
+   <a class="button ml10" href="{{$paginator.Next.URL}}">下一页</a>
+   {{- end}}
+</div>
+{{- end }}

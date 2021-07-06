@@ -1,0 +1,326 @@
+.button,
+a.button {
+  outline: none;
+  border: 1px solid $color-button-border;
+  border-radius: $input-border-radius;
+  color: $color-button;
+  background-color: #fff;
+  padding: 0 0.15rem;
+  line-height: 0.28rem;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+}
+
+.button:hover {
+  color: $color-button-hover;
+  border-color: $color-button-border-hover;
+}
+
+a.button:hover {
+  color: $color-button-hover !important;
+}
+
+.button.primary {
+  border: 1px solid $color-primary;
+  color: #fff;
+  background-color: $color-primary;
+}
+
+.button.primary:hover {
+  color: #fff !important;
+  background-color: $color-primary-hover;
+  border: 1px solid $color-primary-hover;
+}
+
+.button.turquoise {
+  border: 1px solid $color-turquoise;
+  color: #fff;
+  background-color: $color-turquoise;
+}
+
+.button.turquoise:hover {
+  color: #fff !important;
+  background-color: $color-turquoise-hover;
+  border: 1px solid $color-turquoise-hover;
+}
+
+.button.turquoise2 {
+  border: 1px solid #9bbfb3;
+  color: #fff;
+  background-color: #9bbfb3;
+}
+
+.button.turquoise2:hover {
+  color: #fff !important;
+  background-color: #89ab9f;
+  border: 1px solid #89ab9f;
+}
+
+.button.success {
+  border: 1px solid $color-success;
+  color: #fff;
+  background-color: $color-success;
+}
+
+.button.success:hover {
+  color: #fff !important;
+  background-color: $color-success-hover;
+  border: 1px solid $color-success-hover;
+}
+
+.button.warning {
+  border: 1px solid $color-warning;
+  color: #fff;
+  background-color: $color-warning;
+}
+
+.button.warning:hover {
+  color: #fff !important;
+  background-color: $color-warning-hover;
+  border: 1px solid $color-warning-hover;
+}
+
+.button.error {
+  border: 1px solid $color-error;
+  color: #fff;
+  background-color: $color-error;
+}
+
+.button.error:hover {
+  color: #fff !important;
+  background-color: $color-error-hover;
+  border: 1px solid $color-error-hover;
+}
+
+.button.weixin {
+  color: #fff;
+  border-color: $color-weixin;
+  background-color: $color-weixin;
+}
+
+.button.weixin:hover {
+  color: #fff !important;
+  background-color: $color-weixin-hover;
+  border-color: $color-weixin-hover;
+}
+
+.button.qq {
+  color: #fff;
+  border-color: $color-qq;
+  background-color: $color-qq;
+}
+
+.button.qq:hover {
+  color: #fff !important;
+  border-color: $color-qq-hover;
+  background-color: $color-qq-hover;
+}
+
+.button.weibo {
+  color: #fff;
+  border-color: $color-weibo;
+  background-color: $color-weibo;
+}
+
+.button.weibo:hover {
+  color: #fff !important;
+  border-color: $color-weibo-hover;
+  background-color: $color-weibo-hover;
+}
+
+.button.border {
+  color: $color-button;
+  background-color: transparent;
+}
+
+.button.primary.border {
+  color: $color-primary;
+  border: 1px solid $color-primary;
+}
+
+.button.primary.border:hover {
+  color: #fff !important;
+  background-color: $color-primary;
+}
+
+.button.turquoise.border {
+  color: $color-turquoise;
+  border: 1px solid $color-turquoise;
+}
+
+.button.success.border:hover {
+  color: #fff !important;
+  background-color: $color-success;
+}
+
+.button.success.border {
+  color: $color-success;
+  border: 1px solid $color-success;
+}
+
+.button.success.border:hover {
+  color: #fff !important;
+  background-color: $color-success;
+}
+
+.button.warning.border {
+  color: $color-warning;
+  border: 1px solid $color-warning;
+}
+
+.button.warning.border:hover {
+  color: #fff !important;
+  background-color: $color-warning;
+}
+
+.button.error.border {
+  color: $color-error;
+  border: 1px solid $color-error;
+}
+
+.button.error.border:hover {
+  color: #fff !important;
+  background-color: $color-error;
+}
+
+.button.weixin.border {
+  color: $color-weixin;
+  border: 1px solid $color-weixin;
+}
+
+.button.qq.border {
+  color: $color-qq;
+  border: 1px solid $color-qq;
+}
+
+.button.weibo.border {
+  color: $color-weibo;
+  border: 1px solid $color-weibo;
+}
+
+.button.weixin.border:hover {
+  color: #fff !important;
+  background-color: $color-weixin;
+}
+
+.button.qq.border:hover {
+  color: #fff !important;
+  background-color: $color-qq;
+}
+
+.button.weibo.border:hover {
+  color: #fff !important;
+  background-color: $color-weibo;
+}
+
+.button.radius {
+  padding: 0.08rem 0.2rem;
+  border-radius: 0.2rem;
+}
+
+.button.circle {
+  padding: 0;
+  width: 0.4rem;
+  height: 0.4rem;
+  line-height: 0.4rem;
+  border-radius: 50%;
+}
+
+.button[disabled],
+.button[disabled]:hover {
+  color: $color-button-disabled;
+  border: 1px solid $color-button-border-disabled;
+  cursor: default;
+}
+
+.button.primary[disabled],
+.button.primary[disabled]:hover {
+  color: #fff;
+  background-color: $color-primary-disabled;
+  border: 1px solid $color-primary-disabled;
+}
+
+.button.success[disabled],
+.button.success[disabled]:hover {
+  color: #fff;
+  background-color: $color-success-disabled;
+  border: 1px solid $color-success-disabled;
+}
+
+.button.warning[disabled],
+.button.warning[disabled]:hover {
+  color: #fff;
+  background-color: $color-warning-disabled;
+  border: 1px solid $color-warning-disabled;
+}
+
+.button.error[disabled],
+.button.error[disabled]:hover {
+  color: #fff;
+  background-color: $color-error-disabled;
+  border: 1px solid $color-error-disabled;
+}
+
+.button.turquoise[disabled],
+.button.turquoise[disabled]:hover {
+  color: #fff;
+  background-color: $color-turquoise-disabled;
+  border: 1px solid $color-turquoise-disabled;
+}
+
+.button.checked {
+  color: $color-primary;
+  border: 1px solid $color-primary;
+  position: relative;
+}
+
+.button.checked:after {
+  font-family: 'iconfont' !important;
+  content: '\E657';
+  position: absolute;
+  top: -0.1rem;
+  right: -0.05rem;
+  background: #fff;
+  font-size: 0.16rem;
+  display: inline-block;
+  height: 0.22rem;
+}
+
+.button .iconfont {
+  font-size: 0.12rem;
+  vertical-align: inherit;
+  margin-right: 0.07rem;
+}
+
+.nav-button {
+  height: 0.5rem;
+  border-radius: 0;
+  padding: 0 0.2rem;
+}
+
+.button-group {
+  display: inline-flex;
+  border: 1px solid $color-primary;
+  border-radius: $input-border-radius;
+  overflow: hidden;
+}
+
+.button-group button {
+  outline: none;
+  border: none;
+  background: #fff;
+  line-height: 0.28rem;
+  padding: 0 0.2rem;
+  border-right: 1px solid $color-button-border;
+  cursor: pointer;
+}
+
+.button-group button:last-child {
+  border-right: none;
+}
+
+.button-group button.active {
+  background: $color-primary;
+  color: #fff;
+}
